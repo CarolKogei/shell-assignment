@@ -3,7 +3,7 @@
 How many processes are currently running on your system? **one process**
 
 ```
-$ ps -r | wc -l
+$ ps -r | expr $(wc -l) -1
 ```
 ### Question 2
 
