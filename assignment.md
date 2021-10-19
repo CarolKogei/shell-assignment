@@ -156,6 +156,27 @@ following what the program displays some text according to the following pattern
 
 It's now current_time on this lovely day of current_day." and it exits
 
+```
+read -p "what's your name?" name
+echo $name
+date=$(date +%H)
+time=$(date +%T)
+day=$(date +%D)
+
+if [ $date  -lt "12" ]
+then 
+echo "Good morning  $name"
+echo "It is now $time of this beautiful $day"
+elif [[ $date -gt "12" && $date -lt "16" ]]
+then
+echo "Good afternoon $name"
+echo "It is now $time of this beautiful $day"
+else
+echo "Good evening $name"
+echo "It is now $time of this beautiful $day"
+fi
+```
+
 
 ### Question 20
 
