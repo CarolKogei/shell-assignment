@@ -126,9 +126,12 @@ done
 
 ### Question 16
 
-Create at once 20 files called "trial1" to "trial20" and *then* rename them all by appending the suffix ".data". 
+Create at once 20 files called "trial1" to "trial20" 
+```
+touch trial{0001..0020}.c 
+```
 
-Of course, don't issue 20 commands, but just one.
+and *then* rename them all by appending the suffix ".data". 
 
 
 
