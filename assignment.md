@@ -138,8 +138,9 @@ and *then* rename them all by appending the suffix ".data".
 ### Question 17
 
 Try this with the command "expr 1 / 0", whose purpose is to calculate the integer result of 1 divided by 0. What happens? Why?
-
-
+```
+It doesn't give a definite solution since any number divided by zero is undefined.
+```
 
 ### Question 18
 
@@ -181,3 +182,6 @@ fi
 ### Question 20
 
 Suppose your current working directory is /home/icipe/Linux/Exercises/. What is the command that will enable to move to /home/icipe/Fun_stuff/?
+```
+cd ../../Fun_stuff/
+```
