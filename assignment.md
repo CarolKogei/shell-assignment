@@ -148,6 +148,9 @@ It doesn't give a definite solution since any number divided by zero is undefine
 ### Question 18
 
 How can you separately redirect the standard output and the standard error streams into two separate files?
+```
+command 2> error > output
+```
 
 
 ### Question 19
