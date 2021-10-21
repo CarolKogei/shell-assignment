@@ -76,14 +76,14 @@ grep ">" test.fa | wc -l
 Extract only the identifier lines from this file, and write them into a file called "identifiers.txt".
 
 ```
-grep ">" test.fa > identifiers.txt
+$ grep ">" test.fa > identifiers.txt
 ```
 ### Question 11
 
 How can you process the file you got from question 8 to replace all its uppercase "A" letters into lowercase "a" letters, leaving the rest untouched?
 
 ```
-sed "s/A/a/g" test.fa > newtest.fa
+$ sed "s/A/a/g" test.fa > newtest.fa
 ```
 
 ### Question 12
@@ -92,7 +92,7 @@ In one command, ask for the display of all identifier lines from the same file t
 
 on your screen effectively start with the character '>'.
 ```
-grep ">" test.fa
+$ grep ">" test.fa
 ```
 
 ### Question 13
@@ -115,11 +115,11 @@ Once this is done, how do you count the species names with their order of multip
 Write a loop in Bash producing all the integers from 1 to 30, one per line?
 
 ```
-for (( int=0; int<=30; int++ ))
-do
-echo -n "$int "
-echo 
-done
+$ for (( int=0; int<=30; int++ ))
+> do
+> echo -n "$int "
+> echo 
+> done
 
 ```
 
@@ -128,10 +128,13 @@ done
 
 Create at once 20 files called "trial1" to "trial20" 
 ```
-touch trial{0001..0020}.c 
+$ touch trial{0001..0020}.c 
 ```
 
 and *then* rename them all by appending the suffix ".data". 
+```
+$ for i in *.c; do mv "$i" "${i%}.data" ; done
+```
 
 
 
