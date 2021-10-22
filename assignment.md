@@ -66,7 +66,7 @@ $ wc -l test.fa
 ```
 How do you count the number of sequences?
 ```
-grep ">" test.fa | wc -l
+$ grep ">" test.fa | wc -l
 ```
 
 
@@ -118,7 +118,7 @@ Once this is done, how do you count the species names with their order of multip
 (i.e. how many sequences belong to Mus musculus, how many to Homo sapiens, etc)?
 
 ```
-sort | uniq -c sname.txt
+$ sort | uniq -c sname.txt
 ```
 
 
