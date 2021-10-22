@@ -98,6 +98,14 @@ $ grep ">" test.fa
 ### Question 13
 
 Can you write a very short script (possibly one single commandline) to extract from the same file the species names?
+```
+grep -v PREDICTED: identifier.txt > notpredicted.txt
+grep PREDICTED: identifier.txt > predicted.txt
+cut -d '' -f 2,3 notpredicted.txt > notpredicted.txt
+cut -d '' -f 3,4 predicted.txt > predicted.txt
+```
+
+
 
 
 
