@@ -189,5 +189,5 @@ fi
 
 Suppose your current working directory is /home/icipe/Linux/Exercises/. What is the command that will enable to move to /home/icipe/Fun_stuff/?
 ```
-cd ../../Fun_stuff/
+$ cd ../../Fun_stuff/
 ```
