@@ -99,10 +99,11 @@ $ grep ">" test.fa
 
 Can you write a very short script (possibly one single commandline) to extract from the same file the species names?
 ```
-grep -v PREDICTED: identifier.txt > notpredicted.txt
-grep PREDICTED: identifier.txt > predicted.txt
-cut -d '' -f 2,3 notpredicted.txt > notpredicted.txt
-cut -d '' -f 3,4 predicted.txt > predicted.txt
+grep -v PREDICTED: identifiers.txt > notpredicted.txt
+grep  PREDICTED: identifiers.txt > predicted.txt
+cut -d ' ' -f 2,3 notpredicted.txt > species.txt
+cut -d ' ' -f 3,4 predicted.txt >> species.txt
+cut -d ' ' -f 2 species.txt > sname.txt
 ```
 
 
@@ -116,6 +117,9 @@ Once this is done, how do you count the species names with their order of multip
 
 (i.e. how many sequences belong to Mus musculus, how many to Homo sapiens, etc)?
 
+```
+sort | uniq -c sname.txt
+```
 
 
 ### Question 15
